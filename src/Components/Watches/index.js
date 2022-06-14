@@ -13,7 +13,7 @@ const Watches = () => {
             <form>
                 <input type='text' value={form.name} onChange={(e)=>setForm(prev=>({...prev,name:e.target.value}))}/>
                 <input type='number' value={form.zone} onChange={(e)=>setForm(prev=>({...prev,zone:parseInt(e.target.value)}))}/>
-                <button onClick={addWatches}>Добавить</button>
+                <button type='button' onClick={addWatches}>Добавить</button>
             </form>
             <ClockList watches={watches}/>
         </div>
