@@ -19,10 +19,10 @@ router.get('/notes', async (ctx, next) => {
 });
 
 router.post('/notes', async(ctx, next) => {
-    const newNote = {...ctx.request.body, id: nextId++}
+    const newNote = {...JSON.parse(ctx.request.body), id: nextId++}
     notes.push(newNote);
-    ctx.response.body = newNote;
-});
+    ctx.response.body = newNote
+})
 
 router.delete('/notes/:id', async(ctx, next) => {
     const noteId = Number(ctx.params.id);
@@ -35,6 +35,6 @@ router.delete('/notes/:id', async(ctx, next) => {
 
 app.use(router.routes()).use(router.allowedMethods());
 
-const port = process.env.PORT || 7777;
+const port = process.env.PORT || 7775;
 const server = http.createServer(app.callback());
 server.listen(port, () => console.log('server started'));
