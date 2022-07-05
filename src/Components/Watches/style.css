@@ -1,0 +1,31 @@
+label {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+input {
+    margin: 5px;
+    border-radius: 0;
+    border: 1px solid black;
+    padding: 3px 5px;
+}
+button {
+    margin: 5px;
+    border-radius: 0;
+    border: 1px solid black;
+    padding: 3px 20px;
+    background-color: white;
+}
+form {
+    display: flex;
+    justify-content: center;
+}
+.clock{
+    display: flex;
+    font-weight: bold;
+    font-size: 20px;
+    justify-content: center;
+}
+.clock>div {
+    padding: 0 5px;
+}

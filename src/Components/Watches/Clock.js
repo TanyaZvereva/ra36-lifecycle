@@ -4,7 +4,7 @@ import { DateTime } from "luxon"
 const Clock = ({name,offset,time,sec,handleRemove})=>{
     const offsetTime = time.plus({seconds:sec,minutes:new Date().getTimezoneOffset(),hours:offset})
     return(
-        <div>
+        <div className="clock">
             <div>{name}</div>
             <div>{offsetTime.c.hour}:{offsetTime.c.minute>9?offsetTime.c.minute:'0'+offsetTime.c.minute}:{offsetTime.c.second>9?offsetTime.c.second:'0'+offsetTime.c.second}</div>
             <span onClick={handleRemove}>X</span>

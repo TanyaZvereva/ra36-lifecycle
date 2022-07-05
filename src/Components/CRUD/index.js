@@ -31,6 +31,7 @@ const CRUD = () => {
         }))
     }
  return <section className="crud">
+    <span>Notes</span>
     <button onClick={hadleGetNoteList}>Refresh</button>
     <div className="note-list">
         {noteList.map(note=>{
